@@ -1,4 +1,4 @@
-var index_foto_actual;
+let index_foto_actual;
 
 function abrirModal(img, index) {
     index_foto_actual = index;
@@ -9,7 +9,7 @@ function abrirModal(img, index) {
     // Get the button that opens the modal
 
     // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
+    let span = document.getElementsByClassName("close")[0];
 
     // When the user clicks on the button, open the modal 
     //btn.onclick = function() {
@@ -34,7 +34,7 @@ function abrirModal(img, index) {
 
 function proxima() {
 
-    var fotosGaleria = document.querySelectorAll('#galeria img');
+    let fotosGaleria = document.querySelectorAll('#galeria img');
 
     if (fotosGaleria.length - 1 == index_foto_actual) {
         index_foto_actual = -1;
@@ -47,7 +47,7 @@ function proxima() {
 
 function anterior() {
 
-    var fotosGaleria = document.querySelectorAll('#galeria img');
+    let fotosGaleria = document.querySelectorAll('#galeria img');
 
     if (index_foto_actual == 0) {
         index_foto_actual = fotosGaleria.length;
@@ -58,7 +58,7 @@ function anterior() {
 
 }
 
-var visibleMenuResponsive = false;
+let visibleMenuResponsive = false;
 function mostrarMenuResponsive(){
     if (visibleMenuResponsive){
         document.getElementById("nav").className = "";
